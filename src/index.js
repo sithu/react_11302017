@@ -1,14 +1,18 @@
 import * as React from 'react';
 import * as ReactDOM from  'react-dom';
-import { ColorTool } from './components/ColorTool';
 import { CarTool } from './components/CarTool';
 
-ReactDOM.render(
-    React.createElement(ColorTool),
-    document.querySelector('#root'),
-);
+// ReactDOM.render(
+//     React.createElement('div', null,
+//         React.createElement(ColorTool),
+//         React.createElement(CarTool),
+//     ),
+//     document.querySelector('#root'),
+// );
 
 ReactDOM.render(
-    React.createElement(CarTool),
-    document.querySelector('#CarTool'),
+    <div>
+        <CarTool />
+    </div>,
+    document.querySelector('#root'),
 );
