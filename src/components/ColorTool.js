@@ -5,14 +5,13 @@ export class ColorTool extends React.Component {
         // return React.createElement('h1', null, 'Color Tool!');
         // jsx is alternative syntax to the above fun call.
         const headerText = 'Color Tool!';
-
+        const colors = [ "red" , "blue" ]
+        
         return (
             <div>
                 <header><h1>{headerText.toUpperCase()}</h1></header>
                 <ul>
-                    <li>red</li>
-                    <li>green</li>
-                    <li>blue</li>
+                    {colors.map(color => <li>{color}</li>)}
                 </ul>
             </div>
         );
