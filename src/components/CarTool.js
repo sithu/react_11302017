@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { ToolHeader } from './ToolHeader';
 
 export class CarTool extends React.Component {
     constructor(props) {
@@ -37,9 +38,7 @@ export class CarTool extends React.Component {
     render() {
         return (
             <div>
-                <header>
-                    <h1>{this.props.title}</h1>
-                </header>
+                <ToolHeader headerText={this.props.title} />
                 <table>
                     <tbody>
                     <tr>
