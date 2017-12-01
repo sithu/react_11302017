@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 
 export class ToolHeader extends React.Component {

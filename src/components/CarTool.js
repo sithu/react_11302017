@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { ToolHeader } from './ToolHeader';
+import { CarTable } from './CarTable';
 
 export class CarTool extends React.Component {
     constructor(props) {
@@ -39,18 +40,7 @@ export class CarTool extends React.Component {
         return (
             <div>
                 <ToolHeader headerText={this.props.title} />
-                <table>
-                    <tbody>
-                    <tr>
-                        {Object.keys(this.props.cars[0]).map(key => <th>{key}</th>)}
-                    </tr>
-                    {this.state.cars.map(car => 
-                        <tr>
-                            <td>{car.make}</td><td>{car.model}</td><td>{car.year}</td><td>{car.color}</td><td>{'$' + car.price}</td>
-                        </tr>
-                    )}
-                    </tbody>
-                </table>
+                <CarTable cars={this.state.cars}/>
                 <form>
                     <div>
                         <label htmlFor="new-car-make">Make:</label>
