@@ -3,7 +3,11 @@ import * as ReactDOM from  'react-dom';
 import { CarTool } from './components/CarTool';
 import { ColorTool } from './components/ColorTool';
 
-const colorList = [ "Red" , "Green", "Blue" ]
+const colorList = [ 
+    { name: "Red", hexCode: "#ff0000" }, 
+    { name: "Green", hexCode: "#0000ff"},
+    { name: "Blue", hexCode: "#00f0" } 
+];
 
 const carList = [
     { make: "Honda", model: "Civic", year: 1999, color: "red", price: 1000 },
@@ -12,8 +16,8 @@ const carList = [
 
 ReactDOM.render(
     <div>
-        <ColorTool colors={colorList} />
         <CarTool title='Car Tool' cars={carList}/>
+        <ColorTool colors={colorList} />
     </div>,
     document.querySelector('#root'),
 );
