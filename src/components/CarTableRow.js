@@ -1,26 +1,11 @@
 import * as React from 'react';
 
-export class CarTableRow extends React.Component {
-    constructor(props) {
-        super(props);
-        this.onClick = this.onClick.bind(this);
-    }
-
-    onClick(e) {
-        this.props.onClick(this.props.car)
-    }
-
-    render() {
-        const car = this.props.car;
-        return (
-            <tr>
-                <td>{car.make}</td>
-                <td>{car.model}</td>
-                <td>{car.year}</td>
-                <td>{car.color}</td>
-                <td>{'$' + car.price}</td>
-                <td><button type="button" onClick={this.onClick}>Delete</button></td>
-            </tr>
-        );
-    }
-}
+export const CarTableRow = props =>
+    <tr>
+        <td>{props.car.make}</td>
+        <td>{props.car.model}</td>
+        <td>{props.car.year}</td>
+        <td>{props.car.color}</td>
+        <td>{'$' + props.car.price}</td>
+        <td><button type="button" id={props.car.id} onClick={props.onClick}>Delete</button></td>
+    </tr>;

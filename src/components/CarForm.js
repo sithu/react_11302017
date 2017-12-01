@@ -10,6 +10,7 @@ export class CarForm extends React.Component {
 
     initState() {
         return {
+            id: 0,
             make: '',
             model: '',
             year: 0,

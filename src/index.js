@@ -10,8 +10,8 @@ const colorList = [
 ];
 
 const carList = [
-    { make: "Honda", model: "Civic", year: 1999, color: "red", price: 1000 },
-    { make: "Ford", model: "Focus", year: 2000, color: "blue", price: 500 }    
+    { id: 1, make: "Honda", model: "Civic", year: 1999, color: "red", price: 1000 },
+    { id: 2, make: "Ford", model: "Focus", year: 2000, color: "blue", price: 500 },    
 ];
 
 ReactDOM.render(

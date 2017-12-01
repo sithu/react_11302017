@@ -10,7 +10,8 @@ export class CarTool extends React.Component {
             cars: this.props.cars.concat(),
         };
         this.onSubmit = this.onSubmit.bind(this);
-        this.onDelete = this.onDelete.bind(this);
+        // babel does the bind magic by moving the onDelete fun with = (x) => {} to the constructor! 
+        // this.onDelete = this.onDelete.bind(this);
     }
 
     onSubmit(newCar) {
@@ -19,12 +20,10 @@ export class CarTool extends React.Component {
         });
     }
 
-    onDelete(car) {
+    onDelete = (e) => {
+        const carIndex = this.state.cars.findIndex(car => car.id === parseInt(e.target.id));
         this.setState({
-            cars: this.state.cars.filter(c => {
-                return c.name === car.name && 
-                    c.model === car.model;
-            }), 
+            cars: [ ...this.state.cars.slice(0, carIndex), ...this.state.cars.slice(carIndex + 1)],
         });
     }
 
