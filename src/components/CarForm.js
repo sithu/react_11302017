@@ -25,7 +25,7 @@ export class CarForm extends React.Component {
     }
 
     onClick(e) {
-        this.setState(this.initState());
+        this.setState(this.initState()); // To clear the form.
         this.props.onSubmit(this.state);
     }
 
