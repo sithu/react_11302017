@@ -20,8 +20,8 @@ export class CarTool extends React.Component {
         });
     }
 
-    onDelete = (e) => {
-        const carIndex = this.state.cars.findIndex(car => car.id === parseInt(e.target.id));
+    onDelete = (id) => {
+        const carIndex = this.state.cars.findIndex(car => car.id === parseInt(id));
         this.setState({
             cars: [ ...this.state.cars.slice(0, carIndex), ...this.state.cars.slice(carIndex + 1)],
         });
